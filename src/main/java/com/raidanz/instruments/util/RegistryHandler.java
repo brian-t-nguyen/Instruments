@@ -16,4 +16,5 @@ public class RegistryHandler {
     }
     // Items
     public static final RegistryObject<Item> GUITAR = ITEMS.register("guitar", ItemBase::new);
+    public static final RegistryObject<Item> DRUM_KIT = ITEMS.register("drum_kit", ItemBase::new);
 }

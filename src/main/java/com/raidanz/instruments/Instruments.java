@@ -2,7 +2,8 @@ package com.raidanz.instruments;
 
 import com.raidanz.instruments.util.RegistryHandler;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,8 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 @Mod("instruments")
 public class Instruments
@@ -38,12 +37,24 @@ public class Instruments
 
     private void doClientStuff(final FMLClientSetupEvent event) {
     }
+    public static class InstrumentItemGroup extends ItemGroup {
+        public static final InstrumentItemGroup instance = new InstrumentItemGroup();
+
+        private InstrumentItemGroup() {
+            super("Instruments");
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.GUITAR.get());
+        }
+
+    }
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            LOGGER.info("HELLO from Register Block");
+        public static void guitarEvent(RegistryEvent.Register<Block> blockRegistryEvent) {
         }
     }
 }
