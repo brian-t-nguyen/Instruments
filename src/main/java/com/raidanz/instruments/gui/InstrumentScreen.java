@@ -13,8 +13,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class InstrumentScreen extends Screen {
-    private static final int WIDTH = 256;
-    private static final int HEIGHT = 256;
+    private static final int WIDTH = 220;
+    private static final int HEIGHT = 220;
     private ResourceLocation BACKGROUND_TEXTURE;
     private boolean showImage = true;
     public InstrumentScreen(String instrumentName) {
@@ -43,7 +43,7 @@ public class InstrumentScreen extends Screen {
 
     public void render(final int mouseX, final int mouseY, final float partialTicks){
         if (showImage){
-            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 0.25F);
+            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         }
         else{
             RenderSystem.color4f(1.0F, 1.0F, 1.0F, 0F);
@@ -60,7 +60,6 @@ public class InstrumentScreen extends Screen {
     }
 
     public static void open(String instrumentName){
-        //Minecraft.getInstance().displayGuiScreen(new InstrumentScreen(instrumentName));
         Minecraft minecraft = Minecraft.getInstance();
         minecraft.deferTask(() -> minecraft.displayGuiScreen(new InstrumentScreen(instrumentName)));
     }

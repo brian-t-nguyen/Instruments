@@ -1,7 +1,7 @@
 package com.raidanz.instruments.items;
 
 import com.raidanz.instruments.InstrumentsMod;
-import com.raidanz.instruments.gui.InstrumentScreen;
+import com.raidanz.instruments.gui.DrumKitScreen;
 import com.raidanz.instruments.util.RegistryHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -35,15 +35,13 @@ public class Instrument extends Item {
     }
 
     //Drum Kit Class
-    public static class DrumKit extends Instrument{
+    public static class DrumKit extends Instrument {
         private boolean isPlaying = false;
         public DrumKit(){
             super.name = "drum_kit";
         }
-        public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn){
-            worldIn.playSound(playerIn, new BlockPos(playerIn.getPositionVector()), RegistryHandler.drum_hat_closed, SoundCategory.VOICE, 1.0f, 1.0f);
-            InstrumentsMod.LOGGER.info("this.getTransKey: " +this.getInstrumentName());
-            InstrumentScreen.open(this.getInstrumentName());
+        public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
+            DrumKitScreen.open();
             return super.onItemRightClick(worldIn, playerIn, handIn);
         }
     }
