@@ -1,0 +1,9 @@
+{
+  "sound_guitar_a": {
+    "category": "neutral",
+    "subtitle": "instruments.subtitle.sound_guitar_a",
+    "sounds": [
+      "instruments:guitar/resonatehatclosed021"
+    ]
+  }
+}

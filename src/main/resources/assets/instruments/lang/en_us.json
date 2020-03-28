@@ -2,5 +2,7 @@
   "item.instruments.guitar": "Guitar",
   "item.instruments.drum_kit": "Drum Kit",
 
-  "itemGroup.Instruments": "Instruments"
+  "itemGroup.Instruments": "Instruments",
+
+  "instruments.subtitle.sound_guitar_a": "Guitar A Chord"
 }
