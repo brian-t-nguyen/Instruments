@@ -24,19 +24,16 @@ public class Instrument extends Item {
 
     // Guitar Class
     public static class Guitar extends Instrument {
-
-        public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn){
-
-
-            worldIn.playSound(playerIn, new BlockPos(playerIn.getPositionVector()), RegistryHandler.soundGuitarA, SoundCategory.NEUTRAL, 1.0f, 1.0f);
-            playerIn.addPotionEffect(new EffectInstance(Effects.SPEED, 500, 5));
-            return super.onItemRightClick(worldIn, playerIn, handIn);
-        }
-
     }
 
     //Drum Kit Class
     public static class DrumKit extends Instrument {
+        public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn){
 
+
+            worldIn.playSound(playerIn, new BlockPos(playerIn.getPositionVector()), RegistryHandler.drum_hat_closed, SoundCategory.VOICE, 1.0f, 1.0f);
+            playerIn.addPotionEffect(new EffectInstance(Effects.SPEED, 500, 5));
+            return super.onItemRightClick(worldIn, playerIn, handIn);
+        }
     }
 }

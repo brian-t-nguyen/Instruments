@@ -1,9 +1,44 @@
 {
-  "sound_guitar_a": {
-    "category": "neutral",
-    "subtitle": "instruments.subtitle.sound_guitar_a",
+  "drum_hat_closed": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_hat_closed",
     "sounds": [
-      "instruments:guitar/resonatehatclosed021"
+      "instruments:drum_kit/resonate_hat_closed021"
+    ]
+  },
+  "drum_hat_open": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_hat_open",
+    "sounds": [
+      "instruments:drum_kit/resonate_hat_open02"
+    ]
+  },
+  "drum_toms": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_toms",
+    "sounds": [
+      "instruments:drum_kit/resonate_tom10"
+    ]
+  },
+  "drum_kick": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_kick",
+    "sounds": [
+      "instruments:drum_kit/resonate_kick_mid23"
+    ]
+  },
+  "drum_snare": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_snare",
+    "sounds": [
+      "instruments:drum_kit/resonate_snare13"
+    ]
+  },
+  "drum_crash": {
+    "category": "voice",
+    "subtitle": "instruments.subtitle.drum_crash",
+    "sounds": [
+      "instruments:drum_kit/resonate_crash01"
     ]
   }
 }

@@ -4,5 +4,10 @@
 
   "itemGroup.Instruments": "Instruments",
 
-  "instruments.subtitle.sound_guitar_a": "Guitar A Chord"
+  "instruments.subtitle.drum_hat_closed": "Drum Hi-hat Closed",
+  "instruments.subtitle.drum_hat_open": "Drum Hi-hat Open",
+  "instruments.subtitle.drum_toms": "Drum Toms",
+  "instruments.subtitle.drum_kick": "Drum Kick",
+  "instruments.subtitle.drum_snare": "Drum Snare",
+  "instruments.subtitle.drum_crash": "Drum Crash"
 }
