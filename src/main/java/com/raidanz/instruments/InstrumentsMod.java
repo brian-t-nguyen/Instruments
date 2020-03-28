@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("instruments")
 public class InstrumentsMod
 {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "instruments";
     public static InstrumentsMod instance;
 
@@ -46,9 +46,5 @@ public class InstrumentsMod
             return new ItemStack(RegistryHandler.GUITAR.get());
         }
 
-    }
-
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
     }
 }
