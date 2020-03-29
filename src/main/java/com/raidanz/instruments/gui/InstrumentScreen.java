@@ -18,26 +18,23 @@ public class InstrumentScreen extends Screen {
     private ResourceLocation BACKGROUND_TEXTURE;
     private boolean showImage = true;
     public InstrumentScreen(String instrumentName) {
-        super(new StringTextComponent("instrument gui"));
+        super(new StringTextComponent(instrumentName +" gui"));
         BACKGROUND_TEXTURE = new ResourceLocation(InstrumentsMod.MOD_ID, "textures/gui/" +instrumentName +"_screen.png");
-        System.out.println("textures/gui/" +instrumentName +"_screen");
     }
     protected void init() {
         showImage = true;
         addButton(new Button((this.width)-110, (this.height/2), 110, 20, "Toggle Image", button -> toggleShowImage()));
     }
-    public void toggleShowImage(){
+    public void toggleShowImage() {
         showImage = !showImage;
     }
 
     public boolean mouseClicked(double mouseX, double mouseY, int mouseButton){
-        System.out.println(mouseButton);
         if (mouseButton == 1){
             close(Minecraft.getInstance().player);
         } else if (buttons.get(0).mouseClicked(mouseX, mouseY, mouseButton)){
-            System.out.println(buttons.get(0).mouseClicked(mouseX, mouseY, mouseButton));
-            toggleShowImage();
         }
+
         return true;
     }
 
@@ -60,9 +57,8 @@ public class InstrumentScreen extends Screen {
     }
 
     public static void open(String instrumentName){
-        Minecraft minecraft = Minecraft.getInstance();
-        minecraft.deferTask(() -> minecraft.displayGuiScreen(new InstrumentScreen(instrumentName)));
     }
+
     public static void close(PlayerEntity playerIn){
         playerIn.closeScreen();
     }

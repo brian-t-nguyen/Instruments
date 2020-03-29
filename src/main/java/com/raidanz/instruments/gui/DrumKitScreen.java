@@ -27,13 +27,13 @@ public class DrumKitScreen extends InstrumentScreen {
                 break;
             case GLFW.GLFW_KEY_Z: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_hat_open, SoundCategory.VOICE, 1.0f, 1.0f);
                 break;
-            case GLFW.GLFW_KEY_D: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 0.79f);
+            case GLFW.GLFW_KEY_D: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 1.0f);
                 break;
-            case GLFW.GLFW_KEY_F: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 0.86f);
+            case GLFW.GLFW_KEY_F: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 0.93f);
                 break;
-            case GLFW.GLFW_KEY_G: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, .93f);
+            case GLFW.GLFW_KEY_G: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 0.86f);
                 break;
-            case GLFW.GLFW_KEY_H: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 1.0f);
+            case GLFW.GLFW_KEY_H: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_toms, SoundCategory.VOICE, 1.0f, 0.79f);
                 break;
             case GLFW.GLFW_KEY_B: world.playSound(playerEntity, new BlockPos(playerEntity.getPositionVector()), RegistryHandler.drum_kick, SoundCategory.VOICE, 1.0f, 1.0f);
                 break;
